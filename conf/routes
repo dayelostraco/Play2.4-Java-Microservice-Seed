@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                               @controllers.Assets.versioned(path="/public", file: Asset)
+
+# HeartBeat
+GET         /                                           @controllers.HeartBeatController.heartBeat()
+
+# SampleModel
+POST        /api/1/sampleModel                          @controllers.SampleModelController.create()
+PUT         /api/1/sampleModel/:id                      @controllers.SampleModelController.update(id: Long)
+DELETE      /api/1/sampleModel/:id                      @controllers.SampleModelController.delete(id: Long)
+GET         /api/1/sampleModel/:id                      @controllers.SampleModelController.findById(id: Long)
+GET         /api/1/sampleModel                          @controllers.SampleModelController.findAll()
+
+# We gots that Swagger... documentation
+GET         /api/1/swagger/api-docs                     @controllers.ApiHelpController.getResources
+GET         /api/1/swagger/documentation                @controllers.Assets.at(path="/public", file="swagger/index.html")
+GET         /api/1/swagger/api-docs/sampleModel         @controllers.ApiHelpController.getResource(path = "/sampleModel")
+GET         /api/1/swagger/*file                        @controllers.Assets.at(path="/public/swagger", file)

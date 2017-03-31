@@ -1,0 +1,75 @@
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+/test/protractor/reports
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+*.iml
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Folders #
+###########
+target/
+.idea
+.idea/
+logs/
+application.home_IS_UNDEFINED
+.svn/
+gen/
+
+# Maven directory with auto-generated cucumber feature files #
+##############################################################
+!*/maven/target/generated-test-sources
+
+# Eclipse project files #
+#########################
+.classpath
+.project
+.settings/
+.iml
+
+# Activator files #
+###################
+activator-sbt-echo-play-shim.sbt
+db/
+project/activator-sbt-echo-play-shim.sbt
+project/activator-sbt-eclipse-shim.sbt
+project/activator-sbt-idea-shim.sbt
+atlassian-ide-plugin.xml
+
+# Protractor screenshots #
+##########################
+test/protractor/screenshots
+timelines
+node_modules
+test/coverage
+/reports/
